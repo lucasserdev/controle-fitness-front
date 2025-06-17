@@ -42,7 +42,7 @@ export const Task = () => {
 
 
     const getAllTask = async(userId: number) => {
-        const response = await axios.get(`http://localhost/controle-fitness/backend/endpoints/tasks/getAllTask.php?userId=${userId}`);
+        const response = await axios.get(`https://lucasserdev.com/controle-fitness-back/endpoints/tasks/getAllTask.php?userId=${userId}`);
 
         if(response.data['result']) {
             setTasks(response.data['result']);
@@ -50,7 +50,7 @@ export const Task = () => {
     }
 
     const delTask = async (id: number) => {
-        const response = await axios.delete("http://localhost/controle-fitness/backend/endpoints/tasks/delTask.php", {
+        const response = await axios.delete("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/delTask.php", {
             data: { id }
         });
 
@@ -63,7 +63,7 @@ export const Task = () => {
     }
 
     const completedTask = async(id:number) => {
-        const response = await axios.put("http://localhost/controle-fitness/backend/endpoints/tasks/completedTask.php", {
+        const response = await axios.put("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/completedTask.php", {
             id: id
         });
 
@@ -96,7 +96,7 @@ export const Task = () => {
 
     const handleBtnUpdateTask = async(id: number) => {
         
-        const response = await axios.get("http://localhost/controle-fitness/backend/endpoints/tasks/getTask.php", {
+        const response = await axios.get("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/getTask.php", {
             params: {id: id}
         });
 
@@ -113,7 +113,7 @@ export const Task = () => {
     }
 
     const getComments = async(id: number) => {
-        const response = await axios.get("http://localhost/controle-fitness/backend/endpoints/tasks/getComments.php", {
+        const response = await axios.get("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/getComments.php", {
             params: {id: id}
         });
 
@@ -136,7 +136,7 @@ export const Task = () => {
 
     const handleBtnAddComment = async(id: number) => {
         if(inputComment) {
-            const response = await axios.post("http://localhost/controle-fitness/backend/endpoints/tasks/addComment.php", {
+            const response = await axios.post("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/addComment.php", {
                 'task_id': id,
                 'label': inputComment
             });

@@ -19,7 +19,8 @@ export const ModalCreateTask = ( {closeModalCreateTask, reloadTasks}: Props) => 
     const [statusValues, setStatusValues] = useState([]);
 
     const getPriorityAndStatus = async() => {
-        const response = await axios.get("http://localhost/controle-fitness/backend/endpoints/tasks/getValuesPriority.php");
+        
+        const response = await axios.get("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/getValuesPriority.php");
         if(response.data['result']) {
             setStatusValues(response.data['result'].status);
             setPriorityValues(response.data['result'].priority);
@@ -47,7 +48,7 @@ export const ModalCreateTask = ( {closeModalCreateTask, reloadTasks}: Props) => 
         formData.append('userId', String(currentUserId));
         formData.append('dueDate', dueDate);
 
-        const response = await axios.post("http://localhost/controle-fitness/backend/endpoints/tasks/createTask.php", 
+        const response = await axios.post("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/createTask.php", 
             formData, {
                     headers: {
                         "Content-Type": 'multipart/form-data'

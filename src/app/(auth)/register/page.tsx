@@ -15,7 +15,7 @@ const Page = () => {
         if(confirmPassword === password) {
             console.log('As senhas são iguais');
             if(name && email && password) {
-                const response = await axios.post("http://localhost/controle-fitness/backend/endpoints/createUser.php", {
+                const response = await axios.post("https://lucasserdev.com/controle-fitness-back/endpoints/createUser.php", {
                     name: name,
                     email: email,
                     password: password

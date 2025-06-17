@@ -5,13 +5,13 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Page = () => {
-    const [email, setEmail] = useState('lucas@gmail.com');
-    const [password, setPassword] = useState('123');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const router = useRouter();
 
     const handleBtnLogin = async() => {
         if(email && password) {
-            const response = await axios.post("http://localhost/controle-fitness/backend/endpoints/login.php", {
+            const response = await axios.post("https://lucasserdev.com/controle-fitness-back/endpoints/login.php", {
                 email: email,
                 password: password
             });

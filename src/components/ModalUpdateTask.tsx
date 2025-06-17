@@ -19,7 +19,7 @@ export const ModalUpdateTask = ( {closeModalUpdateTask, reloadTasks, taskValue}:
     const [statusValues, setStatusValues] = useState([]);
 
     const getPriorityAndStatus = async() => {
-        const response = await axios.get("http://localhost/controle-fitness/backend/endpoints/tasks/getValuesPriority.php");
+        const response = await axios.get("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/getValuesPriority.php");
         if(response.data['result']) {
             setStatusValues(response.data['result'].status);
             setPriorityValues(response.data['result'].priority);
@@ -31,7 +31,7 @@ export const ModalUpdateTask = ( {closeModalUpdateTask, reloadTasks, taskValue}:
     }, []);
 
     const handleBtnSave = async() => {
-        const response = await axios.put("http://localhost/controle-fitness/backend/endpoints/tasks/updateTask.php", {
+        const response = await axios.put("https://lucasserdev.com/controle-fitness-back/endpoints/tasks/UpdateTask.php", {
             title: title,
             description: description,
             priority: priority,
