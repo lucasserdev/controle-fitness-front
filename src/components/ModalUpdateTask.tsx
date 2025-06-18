@@ -31,7 +31,7 @@ export const ModalUpdateTask = ( {closeModalUpdateTask, reloadTasks, taskValue}:
     }, []);
 
     const handleBtnSave = async() => {
-        const response = await axios.put("https://fitnessexclusive.com.br/api/controle-fitness-back/endpoints/tasks/UpdateTask.php", {
+        const response = await axios.put("https://fitnessexclusive.com.br/api/controle-fitness-back/endpoints/tasks/updateTask.php", {
             title: title,
             description: description,
             priority: priority,
