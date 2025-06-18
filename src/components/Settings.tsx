@@ -16,7 +16,7 @@ export const Settings = () => {
     const [inputEmail, setInputEmail] = useState('');
 
     const getUser = async() => {
-        const response = await axios.get("https://lucasserdev.com/controle-fitness-back/endpoints/getuser.php", {
+        const response = await axios.get("https://fitnessexclusive.com.br/api/controle-fitness-back/endpoints/getuser.php", {
             params: { id: id}
         });
 
@@ -47,7 +47,7 @@ export const Settings = () => {
             formData.append('id', id);
             formData.append('file', file);
 
-            const response = await axios.post("https://lucasserdev.com/controle-fitness-back/endpoints/addPhoto.php",
+            const response = await axios.post("https://fitnessexclusive.com.br/api/controle-fitness-back/endpoints/addPhoto.php",
                 formData, {
                     headers: {
                         'Content-Type' : 'multipart/form-data'
@@ -68,7 +68,7 @@ export const Settings = () => {
     }
 
     const removePhoto = async(id: any) => {
-        const response = await axios.post("https://lucasserdev.com/controle-fitness-back/endpoints/removePhoto.php", {
+        const response = await axios.post("https://fitnessexclusive.com.br/api/controle-fitness-back/endpoints/removePhoto.php", {
             id: id
         });
 
@@ -82,7 +82,7 @@ export const Settings = () => {
     }
 
     const handleUpdateUser = async() => {
-        const response = await axios.put("https://lucasserdev.com/controle-fitness-back/endpoints/updateUser.php", {
+        const response = await axios.put("https://fitnessexclusive.com.br/api/controle-fitness-back/endpoints/updateUser.php", {
             id: id,
             name: inputName,
             email: inputEmail
@@ -103,7 +103,7 @@ export const Settings = () => {
                 <div className="flex gap-3 mt-5 items-center">
                     <div className="w-20 h-20 bg-yellow-default rounded-full">
                         <img 
-                            src={`${userUpdate?.image_url ? `https://lucasserdev.com/controle-fitness-back/uploads/${userUpdate?.image_url}` : 'https://lucasserdev.com/controle-fitness-back/uploads/avatar.jpg'}`} 
+                            src={`${userUpdate?.image_url ? `https://fitnessexclusive.com.br/api/controle-fitness-back/uploads/${userUpdate?.image_url}` : 'https://fitnessexclusive.com.br/api/controle-fitness-back/uploads/avatar.jpg'}`} 
                             alt="foto-perfil" 
                             className="h-full w-full rounded-full"
                         />

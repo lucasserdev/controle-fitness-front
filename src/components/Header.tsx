@@ -30,7 +30,7 @@ export const Header = ( {menuComponentsSelected}: Props) => {
                 <h1 className="text-yellow-default font-bold text-2xl">Painel de Controle</h1>
                 <div className="flex gap-3 items-center">
                     <p className="w-10 h-10 rounded-full bg-yellow-default">
-                        <img className="h-full w-full rounded-full" src={`${userCtx?.user?.image_url ? `https://lucasserdev.com/controle-fitness-back/uploads/${userCtx?.user?.image_url}` : 'https://lucasserdev.com/controle-fitness-back/uploads/avatar.jpg'}`} alt="" />
+                        <img className="h-full w-full rounded-full" src={`${userCtx?.user?.image_url ? `https://fitnessexclusive.com.br/api/controle-fitness-back/uploads/${userCtx?.user?.image_url}` : 'https://fitnessexclusive.com.br/api/controle-fitness-back/uploads/avatar.jpg'}`} alt="" />
                     </p>
                     <p>Olá, {userCtx?.user?.name} </p>
                     <button onClick={handleBtnLogout} className="cursor-pointer bg-yellow-default text-black font-bold p-2 rounded-md">Sair</button>

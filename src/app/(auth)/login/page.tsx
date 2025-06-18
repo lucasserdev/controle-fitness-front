@@ -11,7 +11,7 @@ const Page = () => {
 
     const handleBtnLogin = async() => {
         if(email && password) {
-            const response = await axios.post("https://lucasserdev.com/controle-fitness-back/endpoints/login.php", {
+            const response = await axios.post("https://fitnessexclusive.com.br/api/controle-fitness-back/endpoints/login.php", {
                 email: email,
                 password: password
             });
